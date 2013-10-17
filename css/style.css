@@ -1,0 +1,23 @@
+html {
+	font-family: roboto, sans-serif;
+	background: #f9f9f9;
+	color: #474747;
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 37px;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h2:hover {
+	color: blue;
+}
