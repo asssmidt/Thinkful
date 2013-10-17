@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'crimson_textsemibold';
+    src: url('crimsontext-semibold-webfont.eot');
+    src: url('crimsontext-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('crimsontext-semibold-webfont.woff') format('woff'),
+         url('crimsontext-semibold-webfont.ttf') format('truetype'),
+         url('crimsontext-semibold-webfont.svg#crimson_textsemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+	font-family: 'lucida grande', sans-serif;
+	height: 100%;
+	font-size: 14px;
+	color: #222;
+	line-height: 20px;
+}
+
+/* GENERIC STYLES */
+
+.cf:before, .cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+.cf { zoom: 1; }
+
+#page-wrapper{
+	width: 70%;
+	margin: 0 auto;
+}
+
+/* HEADER STYLES */
+
+#day{
+	font-size: 12px;
+	color: #999;
+	float: left;
+	margin: 0;
+	display: inline;
+}
+
+header{
+	padding: 27px 0 0 0;
+	margin-bottom: 30px;
+}
+
+header ul{
+	float: right;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header li{
+	display: inline;
+}
+
+header a{
+	font-size: 12px;
+	color: #369;
+	text-decoration: none;
+	margin: 0 0 0 24px;
+}
+
+header a:hover{
+	color: #18afe0;
+}
+
+nav{
+	margin-left: 130px;
+	float: right;
+	display: inline-block;
+}
+
+#signin{
+	color: #18afe0;
+}
+
+#signin:hover{
+	color: #369;
+}
+
+/* CONTENT STYLES */
+
+#content-wrapper{
+	min-width: 770px;
+}
+
+#logo{
+	width: 164px;
+	margin: 0 auto;
+}
+
+#logo img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
