@@ -1,8 +1,7 @@
 html {
-	font-family: 'roboto', sans-serif;
+	font-family: 'Whitney SSm A', sans-serif;
+	-webkit-font-smoothing: antialiased;
 	background: #f9f9f9;
-	color: #474747;
-	font-weight: 300;
 }
 
 h1 {
@@ -20,4 +19,12 @@ h2 {
 
 h2:hover {
 	color: blue;
+}
+
+p{
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	color: #474747;
+
 }
