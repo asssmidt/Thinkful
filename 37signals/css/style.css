@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'crimson_textsemibold';
-    src: url('crimsontext-semibold-webfont.eot');
-    src: url('crimsontext-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('crimsontext-semibold-webfont.woff') format('woff'),
-         url('crimsontext-semibold-webfont.ttf') format('truetype'),
-         url('crimsontext-semibold-webfont.svg#crimson_textsemibold') format('svg');
-}
+
 
 body{
 	font-family: 'lucida grande', sans-serif;
@@ -32,7 +25,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 h1 {
-	font-family: crimson_textsemibold;
+	font-family: 'crimson_textsemibold';
 	font-size: 58px;
 	font-weight: 500;
 	line-height: 60px;
@@ -41,7 +34,7 @@ h1 {
 }
 
 h3 {
-	font-family: crimson_textsemibold;
+	font-family: 'crimson_textsemibold';
 	font-size: 20px;
 	font-weight: 500;
 	line-height: 27px;
@@ -196,11 +189,15 @@ header a:hover {
 	-moz-box-shadow: 0 0 2px 1px #f8f8f8;
 	-webkit-box-shadow: 0 0 2px 1px #f8f8f8;
 	box-shadow: 0 0 2px 1px #f8f8f8;
-    background:    -webkit-linear-gradient(#fff, #efefef);
-    background:    -moz-linear-gradient(#fff, #efefef;
-    background:    -ms-linear-gradient(#fff, #efefef);
-    background:    -o-linear-gradient(#fff, #efefef);
-    background:    linear-gradient(#fff, #efefef);
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #efefef 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#efefef)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#efefef 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#efefef 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#efefef 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 0%,#efefef 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+
 }
 
 
