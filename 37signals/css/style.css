@@ -1,5 +1,3 @@
-
-
 body{
 	font-family: 'lucida grande', sans-serif;
 	height: 100%;
@@ -25,18 +23,18 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 h1 {
-	font-family: 'crimson_textsemibold';
+	font-family: 'headline';
 	font-size: 58px;
-	font-weight: 500;
+	font-weight: normal;
 	line-height: 60px;
 	letter-spacing: -2px;
 	color: #232323;
 }
 
 h3 {
-	font-family: 'crimson_textsemibold';
+	font-family: 'headline';
 	font-size: 20px;
-	font-weight: 500;
+	font-weight: normal;
 	line-height: 27px;
 	color: #222;
 }
