@@ -50,6 +50,10 @@ p {
 	line-height: 20px;
 }
 
+.hide {
+	display: none;
+}
+
 /* HEADER STYLES */
 
 header {
@@ -116,11 +120,80 @@ header a:hover {
 #content_wrapper {
 	width: 960px;
 	margin: 0 auto;
+	position: relative;
+}
+
+.inner-wrapper {
+	width: 830px;
+	margin: 0 auto;
 }
 
 .box_h1 {
 	margin: 0 0 22px 0;
 	text-align: center;
+}
+
+#basecamp-cta .box_h1 {
+	font-size: 46px;
+	margin: 0 0 17px 0;
+	line-height: 46px;
+	letter-spacing: -1px;
+}
+
+#basecamp-cta p {
+	text-align: center;
+	margin-bottom: 46px;	
+}
+
+#basecamp-cta img{
+	position: absolute;
+	top: 160px;
+	left: 300px;
+	z-index: 9999;
+}
+
+#highrise-cta .box_h1 {
+	font-size: 46px;
+	margin: 0 0 17px 0;
+	line-height: 46px;
+	letter-spacing: -1px;
+}
+
+#highrise-cta p {
+	text-align: center;
+	margin-bottom: 46px;	
+}
+
+#highrise-cta img{
+	position: absolute;
+	top: 160px;
+	left: 520px;
+	z-index: 9999;
+}
+
+#campfire-cta .box_h1 {
+	font-size: 46px;
+	margin: 0 0 17px 0;
+	line-height: 46px;
+	letter-spacing: -1px;
+}
+
+#campfire-cta p {
+	text-align: center;
+	margin-bottom: 46px;	
+}
+
+#campfire-cta img{
+	position: absolute;
+	top: 160px;
+	left: 590px;
+	z-index: 9999;
+}
+
+.cta_underline {
+	color: #369;
+	text-decoration: underline;
+	letter-spacing: -1px;
 }
 
 .box_h3 {
@@ -178,6 +251,7 @@ header a:hover {
 }
 
 .box {
+	position: relative;
 	display: inline-block;
 	margin: 0 18px;
 	width: 180px;

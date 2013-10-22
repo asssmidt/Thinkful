@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" href="css/fonts.css" type="text/css" charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/application.js"></script>
 </head>	
 <body>
 	<header class="cf">
@@ -38,11 +39,28 @@
 	</header>
 	<section id="content_wrapper">
 		<section>
-			<h1 class="box_h1">Making collaboration productive and enjoyable for people every day.</h1>
-			<h3 class="box_h3">Frustration-free web-based apps for collaboration, sharing information, and making decisions.</h3>
+			<section id="default-cta" class="innter-wrapper">
+				<h1 class="box_h1">Making collaboration productive and enjoyable for people every day.</h1>
+				<h3 class="box_h3">Frustration-free web-based apps for collaboration, sharing information, and making decisions.</h3>
+			</section>
+			<section id="basecamp-cta" class="inner-wrapper hide">
+				<h1 class="box_h1"><span class="cta_underline">Basecamp</span> is the project management tool you wish you had on your last project.</h1>
+				<p>Are you still managing projects with email? Are you still using Excel for your to-do lists? It’s time to upgrade to Basecamp. Manage projects and collaborate with your team and clients the modern way.</p>
+				<img src="images/arrow-left.png">
+			</section>
+			<section id="highrise-cta" class="inner-wrapper hide">
+				<h1 class="box_h1"><span class="cta_underline">Highrise</span>  remembers the important things about people you’d normally forget.</h1>
+				<p>Keep a permanent record of people you do business with. Know who you talked to, when you talked to them, what was said, and when to follow up next. Over 20,000,000 contacts are tracked using Highrise.</p>
+				<img src="images/arrow-left.png">
+			</section>
+			<section id="campfire-cta" class="inner-wrapper hide">
+				<h1 class="box_h1">From near or far, <span class="cta_underline">Campfire</span> helps teams work together over the web in real-time.</h1>
+				<p>Share ideas, discussions, concepts, images, code samples, videos, mockups, and documents in a real-time private chat room. It’s game changing. We couldn’t run our own business without Campfire.</p>
+				<img src="images/arrow-right.png">
+			</section>
 		</section>
 		<section id="boxes" class="cf">
-				<div class="box">
+				<div id="basecampbox" class="box">
 					<div class="box_img">
 						<img src="images/bs_logo.png" alt="BaseCamp logo">
 					</div>
@@ -54,7 +72,7 @@
 					<p>Used by millions for project management.</p>
 				</div>
 			
-				<div class="box">
+				<div id="highrisebox" class="box">
 					<div class="box_img">
 						<img src="images/hr_logo.png" alt="Highrise logo">
 					</div>
@@ -66,7 +84,7 @@
 					<p>Know the people you do business with.</p>
 				</div>
 			
-				<div class="box">
+				<div id="campfirebox" class="box">
 					<div class="box_img">
 						<img src="images/cf_logo.png" alt="Campfire logo">
 					</div>
