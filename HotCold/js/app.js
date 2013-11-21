@@ -44,7 +44,6 @@ $('#guess')
 
 function submit(){
 	var guess = $('#guess').val();
-	//alert("submit" + guess);
 	validateGuess(guess);
 	}
 
@@ -57,9 +56,6 @@ function validateGuess(guess){
 		//autofocus after guess
 
 		$('#guess').focus();
-		
-		return;
-		
 	}
 
 //distance between guess and target and store last guess distance
@@ -68,9 +64,6 @@ function validateGuess(guess){
 	tries = tries + 1;
 	console.log(tries);
 	$('#pastguessheadline').toggleClass('hide').hide().fadeIn('slow');
-	//alert("distance is");
-
-
 
 //feedback
 
@@ -95,6 +88,8 @@ function validateGuess(guess){
 				dismissmodalclass: 'reset-button',    // the class of a button or element that will close an open modal
 			});
 			
+
+			//click button with mouse to reset game
 
 			$('#reset-button').click(function(event) {
   				$('#guess').focus();
@@ -123,8 +118,8 @@ function validateGuess(guess){
 
 // 1st guess
 
-function firstGuess(guess){
-	if(guess > target){
+	function firstGuess(guess){
+		if(guess > target){
 		$("#validate.high").miniNotification();
 		var container = $("<div id='guess-container'></div>");
 		var pastGuess = $("<div class='pastguess'></div>").html(guess);
@@ -134,9 +129,10 @@ function firstGuess(guess){
 		//autofocus after guess
 
   		$('#guess').focus();
-	} else {
-		var container = $("<div id='guess-container'></div>");
+
+		} else {
 		$("#validate.high.lower").miniNotification();
+		var container = $("<div id='guess-container'></div>");
 		var pastGuess = $("<div class='pastguess'></div>").html(guess);
 		var feedback = $("<span class='firstguess'></span>").text("Guess too low");
 		$("#guess-container").append(container,pastGuess,feedback).hide().fadeIn('slow');
@@ -146,8 +142,6 @@ function firstGuess(guess){
 		$('#guess').focus();
 	}
 }
-
-
 
 // Multiple guess
 
@@ -193,10 +187,10 @@ function multiGuess(distance, guess){
 
 //reset game
 
-function resetGame(){
+
 
 $('#reset').click(function(event) {
-  		$('#guess').focus();
+  		//$('#guess').focus();
 		event.preventDefault();
 		$("#guess-container").empty();
 		$('#pastguessheadline').hide();
@@ -204,8 +198,7 @@ $('#reset').click(function(event) {
 		target = Math.floor(Math.random()*100+1);
 		console.log(target);
 		lastDistance.length = 0;
-}); 
-}
+});
 
 
 });
