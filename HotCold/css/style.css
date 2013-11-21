@@ -93,13 +93,15 @@ a:hover{
     cursor: pointer;
     width: 100%;
     padding: 15px;
-    background: #27ae60;
+    background: #e74c3c;
     text-align: center;
     border-top: 2px solid #FFF;
     z-index:9999;
 }
 
-v
+#validate.high, #validate.lower{
+	background: #27ae60;
+}
 
 #validate .colder{
 	background: #3498db;

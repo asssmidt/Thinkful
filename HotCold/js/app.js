@@ -56,6 +56,7 @@ function validateGuess(guess){
 		//autofocus after guess
 
 		$('#guess').focus();
+		return;
 	}
 
 //distance between guess and target and store last guess distance
@@ -83,7 +84,7 @@ function validateGuess(guess){
 			
 			$('#myModal').reveal({ // The item which will be opened with reveal
 				animation: 'fade',                   // fade, fadeAndPop, none
-				animationspeed: 600,                       // how fast animtions are
+				animationspeed: 400,                       // how fast animtions are
 				closeonbackgroundclick: false,              // if you click background will modal close?
 				dismissmodalclass: 'reset-button',    // the class of a button or element that will close an open modal
 			});

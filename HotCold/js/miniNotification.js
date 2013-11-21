@@ -8,7 +8,7 @@ $(function() {
       show: true,
       effect: 'slide',
       opacity: 0.85,
-      time: 1000,
+      time: 2000,
       showSpeed: 500,
       hideSpeed: 250,
       showEasing: '',
