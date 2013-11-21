@@ -202,7 +202,6 @@ $('#reset').click(function(event) {
 		target = Math.floor(Math.random()*100+1);
 		console.log(target);
 		lastDistance.length = 0;
-		restarting();
 });
 
 
