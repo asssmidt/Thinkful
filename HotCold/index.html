@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image/png" href="">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/miniNotification.js"></script>
+	<script type="text/javascript" src="js/jquery.reveal.js"></script>
+	
+</head>	
+<body>
+	<header>
+		<h1>Welcome to the game of HuckleBuckle</h1>
+		<h2>Guess what number this website is thinking about.</h2>
+	</header>
+	<div id="validate">Make sure you enter a number between 1 - 100</div>
+	<div id="validate" class="high">You need to go lower...</div>
+	<div id="validate" class="lower">You need to go higher...</div>
+	<div id="validate" class="colder">Getting colder...</div>
+	<div id="validate" class="same">Not hotter nor colder...</div>
+	<div id="validate" class="hotter">Getting hotter...</div>
+	<div id="myModal" class="reveal-modal">
+     	<h1>Congrats!</h1>
+     	<p>You guessed the number.</p>
+     	<div>
+     		<p id="target">The right number was <span id="target-no"></span></p>
+     		<p id="tries">And you only had to use <span id="tries-no"></span></p>
+     		<input type="button" class="button reset-button" name="reset-button" id="reset-button" value="Try again!">
+     	</div>
+	</div>
+	<section>
+		<form>
+			<div>
+				<span></span><input class="guess" autofocus="autofocus" type="text" id="guess" name="guess something" val="" maxlength="3"placeholder="Type a number between 1 and 100">
+			</div>
+			<div>
+				<input type="button" class="button" name="guess_button" id="guess_button" value="Let it rain!">
+			</div>
+			<a href="#" id="reset">Click here to start a new game</a>
+		</form>
+
+	</section>
+		<div id="guess-wrapper">
+			<h2 id="pastguessheadline" class="hide">Previous guesses</h2>
+			<div id="guess-container"></div>
+		</div>
+
+</body>
+</html>
