@@ -1,16 +1,16 @@
 $(document).ready(function(){
 
+//Last distance in array and number of tries
+
 var lastDistance = [];
 var tries = 0;
 
 //Get a random number
 
 var target = Math.floor(Math.random()*100+1);
-alert(target);
 console.log(target);
 
 //Proceed with submit when click and press enter 
-
 
 $('#guess_button').click(function(){
 	submit();
@@ -24,6 +24,7 @@ $('#guess').keydown(function(e){
 
 });
 
+//autofocus with placeholder after reset game
 
 $('#guess')
   		.bind('focusin', function(e){
@@ -39,6 +40,7 @@ $('#guess')
     	$(this).hide().fadeIn('fast');
  });
 
+//submit function
 
 function submit(){
 	var guess = $('#guess').val();
@@ -46,13 +48,14 @@ function submit(){
 	validateGuess(guess);
 	}
 
-//validate guess input
+//validate guess input for non valid input
 
 function validateGuess(guess){
-	alert("guess is" + guess);
 	if(guess === '' || guess < 1 || guess > 100 || !$.isNumeric(guess)){
 		$('#validate').miniNotification();
-		//alert("validate");
+
+		//autofocus after guess
+
 		$('#guess').focus();
 		
 		return;
@@ -104,15 +107,15 @@ function validateGuess(guess){
 				lastDistance.length = 0;
 			});
 
-		
 
-	//1st guess
 	} else if (lastDistance == false){
 	console.log("1st");
 	lastDistance.push(distance);
 	console.log(lastDistance);
 	firstGuess(guess);
+
 	//multiple guess
+	
 	} else {
 	multiGuess(distance, guess);
 	}
@@ -128,6 +131,7 @@ function firstGuess(guess){
 		var feedback = $("<span class='firstguess'></span>").text("Guess too high");
 		$("#guess-container").append(container,pastGuess,feedback).hide().fadeIn('slow');
 
+		//autofocus after guess
 
   		$('#guess').focus();
 	} else {
@@ -136,7 +140,9 @@ function firstGuess(guess){
 		var pastGuess = $("<div class='pastguess'></div>").html(guess);
 		var feedback = $("<span class='firstguess'></span>").text("Guess too low");
 		$("#guess-container").append(container,pastGuess,feedback).hide().fadeIn('slow');
-		
+	
+		//autofocus after guess
+
 		$('#guess').focus();
 	}
 }
@@ -155,6 +161,8 @@ function multiGuess(distance, guess){
 		var feedback = $("<span class='firstguess guesshigh'></span>").text("Getting colder");
 		$("#guess-container").prepend(container,pastGuess,feedback).hide().fadeIn('slow');
 		
+		//autofocus after guess
+
 		$('#guess').focus();
 	} else if (distance === lastDistance[lastDistance.length - 1]){
 		lastDistance.push(distance);
@@ -165,6 +173,8 @@ function multiGuess(distance, guess){
 		var feedback = $("<span class='sameguess'></span>").text("Not hotter nor colder");
 		$("#guess-container").prepend(container,pastGuess,feedback).hide().fadeIn('slow');
 		
+		//autofocus after guess
+
 		$('#guess').focus();
 	} else {
 		lastDistance.push(distance);
@@ -175,13 +185,13 @@ function multiGuess(distance, guess){
 		var feedback = $("<span class='firstguess guesslow'></span>").text("Getting hotter");
 		$("#guess-container").prepend(container,pastGuess,feedback).hide().fadeIn('slow');
 		
+		//autofocus after guess
+
 		$('#guess').focus();
 	}
 }
 
-
-
-//console.log("are you here?");
+//reset game
 
 function resetGame(){
 
