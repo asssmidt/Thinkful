@@ -26,6 +26,8 @@ $('#guess').keydown(function(e){
 
 //autofocus with placeholder after reset game
 
+function restarting() {
+
 $('#guess')
   		.bind('focusin', function(e){
     	$(this)
@@ -39,6 +41,7 @@ $('#guess')
     	}
     	$(this).hide().fadeIn('fast');
  });
+  		}
 
 //submit function
 
@@ -191,7 +194,7 @@ function multiGuess(distance, guess){
 
 
 $('#reset').click(function(event) {
-  		//$('#guess').focus();
+  		$('#guess').focus();
 		event.preventDefault();
 		$("#guess-container").empty();
 		$('#pastguessheadline').hide();
@@ -199,6 +202,7 @@ $('#reset').click(function(event) {
 		target = Math.floor(Math.random()*100+1);
 		console.log(target);
 		lastDistance.length = 0;
+		restarting();
 });
 
 
