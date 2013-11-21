@@ -131,7 +131,7 @@ function validateGuess(guess){
   		$('#guess').focus();
 
 		} else {
-		$("#validate.high.lower").miniNotification();
+		$("#validate.lower").miniNotification();
 		var container = $("<div id='guess-container'></div>");
 		var pastGuess = $("<div class='pastguess'></div>").html(guess);
 		var feedback = $("<span class='firstguess'></span>").text("Guess too low");

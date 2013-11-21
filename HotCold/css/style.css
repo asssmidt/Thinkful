@@ -93,7 +93,7 @@ a:hover{
     cursor: pointer;
     width: 100%;
     padding: 15px;
-    background: #c0392b;
+    background: #27ae60;
     text-align: center;
     border-top: 2px solid #FFF;
     z-index:9999;
@@ -101,11 +101,11 @@ a:hover{
 
 v
 
-#validate.colder{
+#validate .colder{
 	background: #3498db;
 }
 
-#validate.same{
+#validate .same{
 	background: #7f8c8d;
 }
 
