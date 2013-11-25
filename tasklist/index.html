@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Asser's TaskList</title>
+    
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    
+    <!-- Own styles -->    
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+</head>
+<body>
+    
+    <div class="container">
+        
+<!--HEADLINE-->
+        <div class="col-md-6 col-md-offset-3">
+    
+            <div class="row">
+                <div>
+                    <h1>Asser's TaskList</h1>
+                </div>
+            </div>
+            
+<!--FORM-->
+            <div class="row" id="test">
+                    <form class="form-inline" action="#" name="form" id="form" onsubmit="validate(); return false">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="input" id="input" placeholder="Enter new task here task-new..." >
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="btn-task-add">Add new task</button>
+                    </form>
+            </div>
+            
+<!--TASK WRAPPER-->
+             <div class="row" id="task-wrapper">
+<!--TASK TEMPLATE HIDDEN-->
+                    <div class="input-group hidden" id="task-template">
+                    <span class="input-group-addon">
+                        
+                        <input type="checkbox">
+                    </span>
+                    <input type="text" class="form-control" >     
+                    </div>
+            </div>
+            
+<!--CLEAR CHECKED TASKS BUTTON-->
+            <div class="row">
+                    <button class="btn btn-default btn-danger" id="btn-task-clear">Clear completed tasks</button>
+            </div>
+        
+        </div>
+    
+    </div>
+    
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- own js-->
+    <script src="js/app.js"></script>
+</body>
+</html>
