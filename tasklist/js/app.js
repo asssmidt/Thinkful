@@ -25,13 +25,22 @@ function validate(){
 }
 
 //strikethrough text if checkbox is checked (and vice versa)
-$(document).on('change', '.checkbox', function(){
-       $(this).parents(".task-template").toggleClass('task-done');
+$(document).on("click", ".checkbox", function(){
+    $(this).parents(".task-template").toggleClass('task-done');
+    if($(this).is(":checked")){
+        $(this).parents(".task-template").find(".input").prop("disabled", true);
+    } else {
+        $(this).parents(".task-template").find(".input").prop("disabled", false);
+    }          
 });
 
 //clear tasks marked done when clicking button
 $("#btn-task-clear").click(function(){
     $("#task-wrapper").find(".task-done").remove();
+    
+     //reset and focus on input
+    document.getElementById('form').reset();
+    $('#input').focus();
 });
 
 //save new value on open task
