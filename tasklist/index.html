@@ -29,7 +29,7 @@
             <div class="row" id="test">
                     <form class="form-inline" action="#" name="form" id="form" onsubmit="validate(); return false">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="input" id="input" placeholder="Enter new task here task-new..." >
+                            <input type="text" class="form-control" name="input" id="input" placeholder="Enter new task here..." >
                         </div>
                         <button type="submit" class="btn btn-primary" id="btn-task-add">Add new task</button>
                     </form>
@@ -37,14 +37,16 @@
             
 <!--TASK WRAPPER-->
              <div class="row" id="task-wrapper">
+                 
 <!--TASK TEMPLATE HIDDEN-->
-                    <div class="input-group hidden" id="task-template">
-                    <span class="input-group-addon">
-                        
-                        <input type="checkbox">
-                    </span>
-                    <input type="text" class="form-control" >     
+                    <div class="input-group task-template hidden" id="task-template">
+                        <span class="input-group-addon">
+                            
+                            <input type="checkbox" class="checkbox">
+                        </span>
+                        <input type="text" class="form-control input" >
                     </div>
+                 
             </div>
             
 <!--CLEAR CHECKED TASKS BUTTON-->

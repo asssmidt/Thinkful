@@ -4,3 +4,17 @@
     .hidden {
     display: none;
 }
+    #btn-task-clear {
+    margin-top: 50px;
+}
+    .task-template {
+    margin-top: 15px;
+    width: 375px;
+}
+    .form-group {
+    width: 250px;
+    margin-right: 10px;
+}
+    #form {
+    margin-top: 30px;
+}

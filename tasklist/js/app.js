@@ -1,3 +1,6 @@
+//focus on input
+$('#input').focus();
+
 //validate input for blank and spaces
 function validate(){
     var task = document.form.input;
@@ -5,16 +8,34 @@ function validate(){
         alert("please enter a value");
         return false;
     }
+    
+    //capture the input value as taskText
     taskText = document.form.input.value;
 
     
-//clone hidden task template
-    $("#task-template").clone().appendTo("#task-wrapper").removeAttr("id").removeClass("hidden");
+    //clone hidden task template
+    $("#task-template").clone().insertAfter("#task-template").removeAttr("id").removeClass("hidden");
     
-//insert taskText as value to new task
+    //insert taskText as value to new task
     $('#task-wrapper div:nth-child(2)>input[type="text"]').attr('value', taskText);
     
-//reset and focus on input
+    //reset and focus on input
     document.getElementById('form').reset();
     $('#input').focus();
 }
+
+//strikethrough text if checkbox is checked (and vice versa)
+$(document).on('change', '.checkbox', function(){
+       $(this).parents(".task-template").toggleClass('task-done');
+});
+
+//clear tasks marked done when clicking button
+$("#btn-task-clear").click(function(){
+    $("#task-wrapper").find(".task-done").remove();
+});
+
+//save new value on open task
+$(document).on('keyup', '.input', function(){
+    var value = $(this).val();
+    $(this).attr("value", value);
+});
