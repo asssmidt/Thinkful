@@ -5,7 +5,10 @@ $('#input').focus();
 function validate(){
     var task = document.form.input;
     if(!input.value || /^ *$/.test(input.value)){
-        alert("please enter a value");
+        $(".alert-danger").removeClass("hidden");
+        
+        document.getElementById('form').reset();
+        $('#input').focus();
         return false;
     }
     
@@ -27,8 +30,10 @@ function validate(){
 //strikethrough text if checkbox is checked (and vice versa)
 $(document).on("click", ".checkbox", function(){
     $(this).parents(".task-template").toggleClass('task-done');
+    //if checked, disable text input
     if($(this).is(":checked")){
         $(this).parents(".task-template").find(".input").prop("disabled", true);
+    //if un-checked, enable text input
     } else {
         $(this).parents(".task-template").find(".input").prop("disabled", false);
     }          
