@@ -53,3 +53,8 @@ $(document).on('keyup', '.input', function(){
     var value = $(this).val();
     $(this).attr("value", value);
 });
+
+//remove error on keyup
+$(document).on('keydown', '#input', function(){
+    $(".alert-danger").addClass("hidden");
+});
